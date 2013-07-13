@@ -7,7 +7,7 @@ Install Ruby ( on PC ) and Compass
 
 Install grunt commandline tools: npm intall -g grunt-cli
 
-Install MongoDB and create a db called "blog"
+Install MongoDB and create a db called "forum"
 
 Run: "db.posts.insert({"id":"1", "title": "test"}) when you're using mongo.exe
 
