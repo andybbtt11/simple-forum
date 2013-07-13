@@ -1,0 +1,65 @@
+body,html{
+	height:100%;
+}
+
+h1{
+	font-size:24px;
+}
+
+h2{
+	font-size:16px;
+}
+
+a{
+	font-size:16px;
+	color:#444;
+	text-decoration:none;
+}
+
+.app{
+	width:100%;
+	.container{
+		margin:0 auto;
+		max-width:800px;
+		h1.title{
+			margin:20px 20px 10px 20px;
+		}
+		p.title{
+			margin:0px 20px 20px 20px;
+		}
+		a.goback{
+			margin:20px;
+		}
+		.list{
+			div{
+				background-color:#eee;
+				padding:10px;
+				min-height:60px;
+				margin:0 20px;
+				margin-bottom:10px;
+				&:hover{
+					background-color:#444;
+					color:#fff;
+				}
+				h2{
+					font-weight:bold;
+				}
+				h3{
+					font-style:italic;
+				}
+			}
+		}
+		.post{
+			background-color:#eee;
+			padding:10px;
+			min-height:60px;
+			margin:20px 20px;
+			h2{
+				font-weight:bold;
+			}
+			h3{
+				font-style:italic;
+			}
+		}
+	}
+}
