@@ -1,4 +1,8 @@
-/*! Blog - v0.0.1 - Built: 2013-07-15 12:41:07 PM CST
+/*! Blog - v0.0.1 - Built: 2013-07-15 11:30:01 PM CST
+*   Copyright (c) 2013 Andy Babbitt All Rights Reserved.
+*/
+
+/*! Blog - v0.0.1 - Built: 2013-07-15 11:29:37 PM CST
 *   Copyright (c) 2013 Andy Babbitt All Rights Reserved.
 */
 
@@ -123,6 +127,9 @@ a {
 }
 .app .container .list div:hover {
   background-color: #444;
+  color: #fff;
+}
+.app .container .list div:hover a {
   color: #fff;
 }
 .app .container .list div h2 {

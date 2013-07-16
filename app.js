@@ -51,8 +51,8 @@ passport.deserializeUser(function(obj, done) {
 });
 
 // TODO: Hide this
-var TWITTER_CONSUMER_KEY = ""; //Nope
-var TWITTER_CONSUMER_SECRET = ""; //Nope
+var TWITTER_CONSUMER_KEY = "DZ6rPdWiVJOFuKG47wFDlg"; //Nope
+var TWITTER_CONSUMER_SECRET = "hA4MCr6fC38FLz4cgdzyAtihH47kb8wvsviYbpViBw"; //Nope
  
 passport.use(new TwitterStrategy({
     consumerKey: TWITTER_CONSUMER_KEY,
