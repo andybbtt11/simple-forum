@@ -21,6 +21,8 @@ require.config({
         'app-view':  'component/app/view/AppView',
         'header-component':  'component/header/header-component',
         'header-view': 'component/header/view/HeaderView',
+        'filter-component':  'component/filter/filter-component',
+        'filter-view': 'component/filter/view/FilterView',
 
         'section-component' : 'component/section/section-component',
         'section-container-view' : 'component/section/view/section-container-view',

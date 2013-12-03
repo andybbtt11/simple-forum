@@ -31,6 +31,7 @@ module.exports = function(grunt) {
         mainConfigFile: 'javascripts/bootstrap.js',
         include: [
             'app-view-component',
+            'filter-component',
             'header-component',
             'section-component',
             'post-component'

@@ -1,3 +1,7 @@
+/*! Blog - v0.0.1 - Built: 2013-12-02 11:50:07 PM CST
+*   Copyright (c) 2013 Andy Babbitt All Rights Reserved.
+*/
+
 
 /**
  * almond 0.2.6 Copyright (c) 2011-2012, The Dojo Foundation All Rights Reserved.
@@ -13131,7 +13135,7 @@ define( 'main',['require','jquery','app','templateLoader'],function( require ) {
 
 	$( function() {
 		console.log('main.js');
-		tpl.loadTemplates(['section-item','post','header'], function () {
+		tpl.loadTemplates(['section-item','post','header','filter'], function () {
 			app.initialize();
 		});
 	});
@@ -13159,6 +13163,8 @@ require.config({
         'app-view':  'component/app/view/AppView',
         'header-component':  'component/header/header-component',
         'header-view': 'component/header/view/HeaderView',
+        'filter-component':  'component/filter/filter-component',
+        'filter-view': 'component/filter/view/FilterView',
 
         'section-component' : 'component/section/section-component',
         'section-container-view' : 'component/section/view/section-container-view',
@@ -13214,6 +13220,44 @@ define( 'app-view-component',['require','app-view'],function( require ) {
 		console.log('app-view-component.js');
 		var appView = new AppView();
 		appView.render();
+	};
+});
+define( 'filter-view',['require','jquery','underscore','backbone'],function( require ) {
+
+    
+
+    var $ = require( 'jquery' ),
+       _ = require( 'underscore' ),
+       Backbone = require( 'backbone' );
+
+    var view = Backbone.View.extend({
+
+        el: '.filter-container',
+
+        events: {
+        },
+
+        initialize: function() {
+            this.template = _.template(tpl.get('filter'));
+        },
+
+        render: function() { 
+            this.$el.append( this.template );
+        }
+
+    });
+
+    return view;
+});
+define( 'filter-component',['require','filter-view'],function( require ) {
+
+	
+
+	var FilterView = require( 'filter-view' );
+
+	return function() {
+		var filterView = new FilterView();
+		filterView.render();
 	};
 });
 define( 'header-view',['require','jquery','underscore','backbone'],function( require ) {
