@@ -11,7 +11,7 @@ define( function( require ) {
 
 	$( function() {
 		console.log('main.js');
-		tpl.loadTemplates(['section-item','post'], function () {
+		tpl.loadTemplates(['section-item','post','header'], function () {
 			app.initialize();
 		});
 	});

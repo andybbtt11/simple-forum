@@ -19,6 +19,8 @@ require.config({
         // Components
         'app-view-component':  'component/app/app-view-component',
         'app-view':  'component/app/view/AppView',
+        'header-component':  'component/header/header-component',
+        'header-view': 'component/header/view/HeaderView',
 
         'section-component' : 'component/section/section-component',
         'section-container-view' : 'component/section/view/section-container-view',

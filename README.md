@@ -1,4 +1,4 @@
-Light Weight Forum engine using Backbone, Node, Express, Grunt, Compass and MongoDB
+I am reworking my current blog which is found at babbitt.is/blogging.  I'm using an old unfinished project I was turning into a forum, but catering it to more of a blogging platform, something more robust than the original.
 
 Install
 =======

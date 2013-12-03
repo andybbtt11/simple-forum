@@ -1,10 +1,6 @@
-/*! Blog - v0.0.1 - Built: 2013-07-12 9:13:31 PM CST
-*   Copyright (c) 2013 Andy Babbitt All Rights Reserved.
-*/
-
 
 /**
- * almond 0.2.5 Copyright (c) 2011-2012, The Dojo Foundation All Rights Reserved.
+ * almond 0.2.6 Copyright (c) 2011-2012, The Dojo Foundation All Rights Reserved.
  * Available via the MIT or new BSD license.
  * see: http://github.com/jrburke/almond for details
  */
@@ -387,6 +383,11 @@ var requirejs, require, define;
         }
         return req;
     };
+
+    /**
+     * Expose module registry for debugging and tooling
+     */
+    requirejs._defined = defined;
 
     define = function (name, deps, callback) {
 
@@ -13130,7 +13131,7 @@ define( 'main',['require','jquery','app','templateLoader'],function( require ) {
 
 	$( function() {
 		console.log('main.js');
-		tpl.loadTemplates(['section-item','post'], function () {
+		tpl.loadTemplates(['section-item','post','header'], function () {
 			app.initialize();
 		});
 	});
@@ -13156,6 +13157,8 @@ require.config({
         // Components
         'app-view-component':  'component/app/app-view-component',
         'app-view':  'component/app/view/AppView',
+        'header-component':  'component/header/header-component',
+        'header-view': 'component/header/view/HeaderView',
 
         'section-component' : 'component/section/section-component',
         'section-container-view' : 'component/section/view/section-container-view',
@@ -13211,6 +13214,44 @@ define( 'app-view-component',['require','app-view'],function( require ) {
 		console.log('app-view-component.js');
 		var appView = new AppView();
 		appView.render();
+	};
+});
+define( 'header-view',['require','jquery','underscore','backbone'],function( require ) {
+
+    
+
+    var $ = require( 'jquery' ),
+       _ = require( 'underscore' ),
+       Backbone = require( 'backbone' );
+
+    var view = Backbone.View.extend({
+
+        el: 'header',
+
+        events: {
+        },
+
+        initialize: function() {
+            this.template = _.template(tpl.get('header'));
+        },
+
+        render: function() { 
+            this.$el.append( this.template );
+        }
+
+    });
+
+    return view;
+});
+define( 'header-component',['require','header-view'],function( require ) {
+
+	
+
+	var HeaderView = require( 'header-view' );
+
+	return function() {
+		var headerView = new HeaderView();
+		headerView.render();
 	};
 });
 define( 'section-model',['require','backbone'],function( require ) {

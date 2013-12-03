@@ -11,21 +11,20 @@
   </head>
 
   <body>
-    <header class="header">
-      <div class="container">
-        <a class="logo" href="#"></a>
-        <h1>Name of Site</h1>
-        <nav class="user">
-          <a href="#">Account</a>
-          <a href="#">Sign Out</a>
-        </nav>
-      </div>
+    <header class="header" data-require="header-component">
+      
     </header>
 
     <div class="app">
       <div class="container">
-        <h1 class="title">Name of Section</h2>
-        <p class="title">Description of section</p>
+        <div class="filter-container">
+          <ul>
+            <li class="tech">tech</li>
+            <li class="music">music</li>
+            <li class="dev">dev</li>
+            <li class="other">other</li>
+          </ul>
+        </div>
         <div class="list" data-require="section-component"></div>
       </div>
     </div>
